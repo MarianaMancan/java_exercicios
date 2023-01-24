@@ -1,0 +1,87 @@
+package aula17;
+
+import java.util.Scanner;
+
+public class ex03 {
+     
+	public static void main(String[] args) {
+		
+		boolean infoValida = false;
+		Scanner scan = new Scanner(System.in);
+		String nome;
+		int idade;
+		double salario;
+		String genero;
+		String estadoCivil;
+		
+		do {
+			System.out.println("Digite o nome: ");
+			
+			nome = scan.next();
+			if(nome.length() > 3) {
+				infoValida = true;
+			}
+			else {
+				System.out.println("nome precisa de 3 caracteres ou mais");
+			}
+			
+		}while(!infoValida);
+		
+		infoValida = false;
+		
+		do {
+			System.out.println("Digite a idade: ");
+			 idade = scan.nextInt();
+			if(idade > 0 && idade < 150) {
+				infoValida = true;
+			}else {
+				System.out.println("Idade precisa ser entre 0 e 150");
+			}
+			
+		}while(!infoValida);
+		
+		infoValida = false;
+		do {
+			System.out.println("Digite o salario: ");
+		    salario = scan.nextDouble();
+			if(salario> 0 ) {
+				infoValida = true;
+			}else {
+				System.out.println("Salario precisa ser maior que 0");
+			}
+			
+		}while(!infoValida);
+		
+		infoValida = false;
+		do {
+			System.out.println("Digite o genero: ");
+			genero = scan.next();
+			if(genero.equalsIgnoreCase("m") || genero.equalsIgnoreCase("f")) {
+				infoValida = true;
+			}else {
+				System.out.println("genero precisa ser m para masculino ou f para femino");
+			}
+			
+		}while(!infoValida);
+		
+		infoValida = false;
+		do {
+			System.out.println("Digite o estado civil: ");
+			estadoCivil = scan.next();
+			if(estadoCivil.equalsIgnoreCase("s") || estadoCivil.equalsIgnoreCase("c")
+				|| estadoCivil.equalsIgnoreCase("v") || estadoCivil.equalsIgnoreCase("d")) {
+				infoValida = true;
+			}else {
+				System.out.println("o estado civil precisa ser c para casado,s para solteiro,v para viuvo e d para divorciado");
+			}
+			
+		}while(!infoValida);
+		
+		System.out.println("As sequintes informaçoes foram coletadas: ");
+		System.out.println("nome: " + nome);
+		System.out.println("idade: " + idade);
+		System.out.println("salario: " + salario);
+		System.out.println("genero: " + genero);
+		System.out.println("Estado Civil: " + estadoCivil);
+	}
+}
