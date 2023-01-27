@@ -1,0 +1,30 @@
+package aula17;
+
+import java.util.Scanner;
+
+public class ex05 {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter three numbers: ");
+		int a = sc.nextInt();
+		int b = sc.nextInt();
+		int c = sc.nextInt();
+		
+		
+		if( a > b && a > c) {
+			System.out.println("Higher = " + a);
+		}
+		if( b > a && b > c) {
+			System.out.println("Higher = " + b);
+		}
+		if( c  > a && c > b) {
+			System.out.println("Higher = " + b);
+		}
+		
+		
+		sc.close();
+	}
+}
